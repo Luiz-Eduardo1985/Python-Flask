@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário cadastro de pessoas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div id="form">
+        <div>
+            <form action="" method="post">
+                <h2 class="titulo">Cadastrar pessoas</h2>
+
+        </div>
+        <div class="input">
+            <label for="id">ID:</label>
+            <input class="input_id" id="id" name="id" placeholder="digite seu id" type="text">
+        </div>
+        <div class="input">
+            <label for="Nome">Nome:</label>
+            <input class="input_nome" id="nome" name="nome" placeholder="digite seu nome" type="text">
+        </div>
+        <div class="input">
+            <label for="cpf">cpf:</label>
+            <input class="input_cpf" id="cpf" name="cpf" placeholder="digite seu cpf" type="text">
+        </div>
+        <div id="botoes">
+            <div>
+                <button id="cadastrar" type="submit">Cadastrar</button>
+
+
+                <button id="atualizar" type="submit">Atualizar</button>
+
+
+                <button id="excluir" type="submit">Excluir</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="lista">
+        <h2 class="titulo2">Pessoas cadastros</h2>
+        <button class="fundo-botao-atualizar" type="submit"><img clas="btn-atualizar" src="images/atualizar.png"
+                alt="icone de atualização">
+        </button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+            {% %}
+            <tbody id="pessoas-cadastrads">
+                {% for pessoa in pessoas %}
+                <tr>
+
+                    <td> {{ pessoa.id[0] }} </td>
+                    <td> {{ pessoa.nome[0] }} </td>
+                    <td> {{ pessoa.cpf[0] }} </td>
+
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[1] }} </td>
+                    <td> {{ pessoa.nome[1] }} </td>
+                    <td> {{ pessoa.cpf[1] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[2] }} </td>
+                    <td> {{ pessoa.nome[2] }} </td>
+                    <td> {{ pessoa.cpf[2] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[3] }} </td>
+                    <td> {{ pessoa.nome[3] }} </td>
+                    <td> {{ pessoa.cpf[3] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[4] }} </td>
+                    <td> {{ pessoa.nome[4] }} </td>
+                    <td> {{ pessoa.cpf[4] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[5] }} </td>
+                    <td> {{ pessoa.nome[5] }} </td>
+                    <td> {{ pessoa.cpf[5] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[6] }} </td>
+                    <td> {{ pessoa.nome[6] }} </td>
+                    <td> {{ pessoa.cpf[6] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[7] }} </td>
+                    <td> {{ pessoa.nome[7] }} </td>
+                    <td> {{ pessoa.cpf[7] }} </td>
+                </tr>
+                <tr>
+                    <td> {{ pessoa.id[8] }} </td>
+                    <td> {{ pessoa.nome[8] }} </td>
+                    <td> {{ pessoa.cpf[8] }} </td>
+                </tr>
+
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+
+    </form>
+
+</body>
+
+</html>
